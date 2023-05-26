@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "1xx6abijj3nv967pms5w",
-    "password": "pscale_pw_ywEr3a0tBmmAPwPV47jlCwtXPmUXw3ipGGuozQE8CHA",
-    "database": "santri_hub",
+    "username": "on8gq62fnntgjzb3n6wj",
+    "password": "pscale_pw_5QYIx6chB3xDVdDFkwW09bGdIoTErxGbFZYKd9FkwWb",
+    "database": "apps",
     "host": "ap-southeast.connect.psdb.cloud",
     "dialect": "mysql",
     "dialectOptions": {
@@ -13,9 +13,9 @@
     }
   },
   "test": {
-    "username": "1xx6abijj3nv967pms5w",
-    "password": "pscale_pw_ywEr3a0tBmmAPwPV47jlCwtXPmUXw3ipGGuozQE8CHA",
-    "database": "santri_hub",
+    "username": "on8gq62fnntgjzb3n6wj",
+    "password": "pscale_pw_5QYIx6chB3xDVdDFkwW09bGdIoTErxGbFZYKd9FkwWb",
+    "database": "apps",
     "host": "ap-southeast.connect.psdb.cloud",
     "dialect": "mysql",
     "dialectOptions": {
@@ -26,9 +26,9 @@
     }
   },
   "production": {
-    "username": "1xx6abijj3nv967pms5w",
-    "password": "pscale_pw_ywEr3a0tBmmAPwPV47jlCwtXPmUXw3ipGGuozQE8CHA",
-    "database": "santri_hub",
+    "username": "on8gq62fnntgjzb3n6wj",
+    "password": "pscale_pw_5QYIx6chB3xDVdDFkwW09bGdIoTErxGbFZYKd9FkwWb",
+    "database": "apps",
     "host": "ap-southeast.connect.psdb.cloud",
     "dialect": "mysql",
     "dialectOptions": {

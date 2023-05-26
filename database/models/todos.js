@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Todo.init({
-    name: DataTypes.STRING,
+    title: DataTypes.STRING,
     description: DataTypes.STRING,
     status: DataTypes.ENUM('Todo', 'Ongoing', 'Done'),
     user_id: DataTypes.INTEGER
