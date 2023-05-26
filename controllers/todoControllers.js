@@ -6,10 +6,10 @@ console.log(Todo);
 const addTodo = async (req, res) => {
   try {
     const user = req.user;
-    const { name, description, status } = req.body;
+    const { title, description, status } = req.body;
     console.log({
       user,
-      name,
+      title,
       description,
       status,
     });
@@ -21,7 +21,7 @@ const addTodo = async (req, res) => {
     }
 
     const todo = await Todo.create({
-      name,
+      title,
       description,
       status,
       user_id: user.id,
@@ -62,7 +62,147 @@ const getAll = async (req, res) => {
   } catch (error) {}
 };
 
+const getByid = async (req, res) => {
+  try {
+    const user = req.user;
+    const id = req.params.id;
+
+    if (!user) {
+      return res.status(401).json({
+        message: "User tidak ada!",
+      });
+    }
+
+    const todo = await Todo.findByPk(id);
+
+    console.log(todo);
+
+    if (!todo) {
+      return res.status(404).json({
+        message: "Data tidak ditemukan!",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: "Berhasil mendapatkan dengan ID",
+      todo,
+    });
+  } catch (error) {}
+};
+
+const putByid = async (req, res) => {
+  try {
+    const user = req.user;
+    const { title, description, status } = req.body;
+    const id = req.params.id;
+
+    if (!user) {
+      return res.status(401).json({
+        message: "User tidak ada!",
+      });
+    }
+
+    //   const todo = await getByid(req);
+    const todo = await Todo.findByPk(id);
+
+    if (!todo) {
+      return res.status(404).json({
+        message: "Data tidak ditemukan!",
+      });
+    }
+    await Todo.update(
+      {
+        title,
+        description,
+        status,
+      },
+      {
+        where: { id },
+      }
+    );
+
+    return res.status(200).json({
+      success: true,
+      message: "Berhasil update",
+      todo,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const deleteByid = async (req, res) => {
+  try {
+    const user = req.user;
+    const id = req.params.id;
+
+    if (!user) {
+      return res.status(401).json({
+        message: "User tidak ada!",
+      });
+    }
+
+    const todo = await Todo.findByPk(id);
+
+    if (!todo) {
+      return res.status(404).json({
+        message: "Data tidak ditemukan!",
+      });
+    }
+    await Todo.destroy({
+      where: { id },
+    });
+
+    return res.status(200).json({
+      success: true,
+      message: "Berhasil menghapus",
+      todo,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const deleteAll = async (req, res) => {
+  try {
+    const user = req.user;
+
+    if (!user) {
+      return res.status(401).json({
+        message: "User tidak ada!",
+      });
+    }
+
+    const todo = await Todo.findAll();
+    console.log(todo)
+
+    if (todo.length < 1) {
+      return res.status(404).json({
+        message: "Data tidak ditemukan!",
+      });
+    }
+    await Todo.destroy({
+      //   where: { id },
+      where: {},
+      truncate: true,
+    });
+
+    return res.status(200).json({
+      success: true,
+      message: "Berhasil menghapus semua todo",
+      todo,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 module.exports = {
   addTodo,
   getAll,
+  getByid,
+  putByid,
+  deleteByid,
+  deleteAll,
 };

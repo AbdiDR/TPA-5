@@ -4,6 +4,9 @@ const router = require("express").Router();
 
 router.get("/todos", authMiddleware, todoController.getAll);
 router.post("/todos", authMiddleware, todoController.addTodo);
-// userRouter.post("/users/login", userController.loginUser);
+router.get("/todos/:id", authMiddleware, todoController.getByid);
+router.put("/todos/:id", authMiddleware, todoController.putByid);
+router.delete("/todos/:id", authMiddleware, todoController.deleteByid);
+router.delete("/todos", authMiddleware, todoController.deleteAll);
 
 module.exports = router;
