@@ -26,8 +26,8 @@
     }
   },
   "production": {
-    "username": "053vf0mr9p599dliq5u9",
-    "password": "pscale_pw_51tp4Ofe5iwM88sxj719HhoUjKxzVU9kxwr1fogIxde",
+    "username": "c3bipub0r0a80f0xbput",
+    "password": "pscale_pw_glu1gidRPACZIVyzFLDGGJFhz5kQCzqEuzsZhRlPI50",
     "database": "apps",
     "host": "ap-southeast.connect.psdb.cloud",
     "dialect": "mysql",
