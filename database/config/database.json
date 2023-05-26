@@ -1,23 +1,41 @@
 {
   "development": {
-    "username": "abdidr",
-    "password": "abdi1234",
-    "database": "abdidr",
-    "host": "db4free.net",
-    "dialect": "mysql"
+    "username": "1xx6abijj3nv967pms5w",
+    "password": "pscale_pw_ywEr3a0tBmmAPwPV47jlCwtXPmUXw3ipGGuozQE8CHA",
+    "database": "santri_hub",
+    "host": "ap-southeast.connect.psdb.cloud",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   },
   "test": {
-    "username": "abdidr",
-    "password": "abdi1234",
-    "database": "abdidr",
-    "host": "db4free.net",
-    "dialect": "mysql"
+    "username": "1xx6abijj3nv967pms5w",
+    "password": "pscale_pw_ywEr3a0tBmmAPwPV47jlCwtXPmUXw3ipGGuozQE8CHA",
+    "database": "santri_hub",
+    "host": "ap-southeast.connect.psdb.cloud",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   },
   "production": {
-    "username": "abdidr",
-    "password": "abdi1234",
-    "database": "abdidr",
-    "host": "db4free.net",
-    "dialect": "mysql"
+    "username": "1xx6abijj3nv967pms5w",
+    "password": "pscale_pw_ywEr3a0tBmmAPwPV47jlCwtXPmUXw3ipGGuozQE8CHA",
+    "database": "santri_hub",
+    "host": "ap-southeast.connect.psdb.cloud",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   }
 }
